@@ -3,14 +3,14 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: nginx
-  tag: stable
+  repository: quay.io/russf/docker-devpi
+  tag: latest
   pullPolicy: IfNotPresent
 service:
-  name: nginx
+  name: devpi
   type: ClusterIP
-  externalPort: 80
-  internalPort: 80
+  externalPort: 3141
+  internalPort: 3141
 ingress:
   enabled: false
   # Used to create an Ingress record.
@@ -35,3 +35,8 @@ resources: {}
   # requests:
   #  cpu: 100m
   #  memory: 128Mi
+persistence:
+  enabled: true
+  storageClass: "slow"
+  size: 5G
+  accessMode: ReadWriteOnce

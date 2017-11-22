@@ -2,3 +2,10 @@ apiVersion: v1
 description: A Helm chart for Kubernetes
 name: helm-devpi
 version: 0.1.0
+keywords:
+  - python
+  - devpi
+maintainers:
+  - name: Russ Ferriday
+    email: russf@topia.com
+
