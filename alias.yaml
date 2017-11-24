@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: devpi
+spec:
+  selector:
+      app: helm-devpi
+  ports:
+    - port: 3141
+      targetPort: 3141
