@@ -38,5 +38,5 @@ resources: {}
 persistence:
   enabled: true
   storageClass: "slow"
-  size: 5G
+  size: 8G
   accessMode: ReadWriteOnce
