@@ -26,19 +26,19 @@ spec:
               path: /
               port: {{ .Values.service.internalPort }}
             initialDelaySeconds: 30
-            timeoutSeconds: 5
+            timeoutSeconds: 10
             periodSeconds: 30
             successThreshold: 1
-            failureThreshold: 3
+            failureThreshold: 5
           readinessProbe:
             httpGet:
               path: /
               port: {{ .Values.service.internalPort }}
             initialDelaySeconds: 30
-            timeoutSeconds: 5
+            timeoutSeconds: 10
             periodSeconds: 30
             successThreshold: 1
-            failureThreshold: 3
+            failureThreshold: 5
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- if .Values.nodeSelector }}
