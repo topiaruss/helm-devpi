@@ -37,6 +37,6 @@ resources: {}
   #  memory: 128Mi
 persistence:
   enabled: true
-  storageClass: "slow"
-  size: 8G
+  #storageClass: "slow"
+  size: 10G
   accessMode: ReadWriteOnce
